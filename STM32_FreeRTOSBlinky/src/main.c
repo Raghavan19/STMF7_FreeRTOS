@@ -22,14 +22,11 @@ TaskHandle_t xTaskHandle2 = NULL;
 void vTask1_handler(void *param);
 void vTask2_handler(void *param);
 
-//used for semi hosting
-extern void initialise_monitor_handles();
 
 int main(void)
 {
-	initialise_monitor_handles();
 
-	printf("Hello world \n");
+	//printf("Hello world \n");
 	//Create task 1
 	xTaskCreate(vTask1_handler, "Task_1", configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle1);
 	//Create task 2
@@ -48,7 +45,7 @@ void vTask1_handler(void *param)
 
 	while(1)
 	{
-		printf("Task 1 \n");
+		//printf("Task 1 \n");
 	}
 }
 
@@ -57,6 +54,6 @@ void vTask2_handler(void *param)
 
 	while(1)
 	{
-		printf("Task 2 \n");
+		//printf("Task 2 \n");
 	}
 }
