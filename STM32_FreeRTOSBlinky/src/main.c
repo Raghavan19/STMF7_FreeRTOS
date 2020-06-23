@@ -38,7 +38,7 @@ int main(void)
 {
 	prvSetupHardware();
 
-	sprintf(charmsg,"Hello world \n");
+	sprintf(charmsg,"Hello world \r\n");
 	printmsg(charmsg);
 	//Create task 1
 	xTaskCreate(vTask1_handler, "Task_1", configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle1);
@@ -54,27 +54,31 @@ int main(void)
 
 void vTask1_handler(void *param)
 {
+	char charmsg1[250] = {0};
+	sprintf(charmsg1,"Task1 \r\n");
 
 
 	while(1)
 	{
-		//printf("Task 1 \n");
+
+			printmsg(charmsg1);
 	}
 }
 
 void vTask2_handler(void *param)
 {
+	char charmsg2[250] = {0};
+	sprintf(charmsg2,"Task2 \r\n");
 
 	while(1)
 	{
-		//printf("Task 2 \n");
+		printmsg(charmsg2);
 	}
 }
 
 static void prvUartSetup(void)
 {
 	GPIO_InitTypeDef usart3_pin = {0};
-
 
 	//1. Enable UART3 peripheral clock
 	RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
@@ -85,6 +89,8 @@ static void prvUartSetup(void)
 		Error_Handler();
 	}
 
+	__HAL_RCC_USART3_CLK_ENABLE();
+
 	//2. Enable GPIO clock
 	  __HAL_RCC_GPIOC_CLK_ENABLE();
 	  __HAL_RCC_GPIOA_CLK_ENABLE();
@@ -92,22 +98,27 @@ static void prvUartSetup(void)
 	  __HAL_RCC_GPIOB_CLK_ENABLE();
 	  __HAL_RCC_GPIOD_CLK_ENABLE();
 
-	  __HAL_RCC_USART3_CLK_ENABLE();
 
 	//PD8 UART TX PD9 UART RX
 	//3. Alternate function configuration
 	usart3_pin.Pin = GPIO_PIN_8 | GPIO_PIN_9;
 	usart3_pin.Mode = GPIO_MODE_AF_PP;
+	usart3_pin.Pull = GPIO_NOPULL;
+	usart3_pin.Speed = GPIO_SPEED_FREQ_LOW;
+	usart3_pin.Alternate = GPIO_AF7_USART3;
 	HAL_GPIO_Init(GPIOD,&usart3_pin);
 
     //4. Initialise UART
 	husart3.Instance = USART3;
-	husart3.Init.BaudRate = 115200;
+	husart3.Init.BaudRate = 9600;
 	husart3.Init.WordLength = UART_WORDLENGTH_8B;
 	husart3.Init.StopBits = UART_STOPBITS_1;
 	husart3.Init.Parity = UART_PARITY_NONE;
 	husart3.Init.Mode = UART_MODE_TX_RX;
 	husart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	husart3.Init.OverSampling = UART_OVERSAMPLING_16;
+	husart3.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+	husart3.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
 
 	if (HAL_UART_Init(&husart3) != HAL_OK)
 	{
