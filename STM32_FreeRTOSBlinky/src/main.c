@@ -56,12 +56,11 @@ void vTask1_handler(void *param)
 {
 	char charmsg1[250] = {0};
 	sprintf(charmsg1,"Task1 \r\n");
-
-
 	while(1)
 	{
 
 			printmsg(charmsg1);
+			vTaskDelay(10);
 	}
 }
 
@@ -73,6 +72,7 @@ void vTask2_handler(void *param)
 	while(1)
 	{
 		printmsg(charmsg2);
+		vTaskDelay(10);
 	}
 }
 
