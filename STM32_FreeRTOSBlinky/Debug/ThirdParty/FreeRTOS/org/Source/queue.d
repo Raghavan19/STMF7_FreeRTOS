@@ -76,6 +76,10 @@ ThirdParty/FreeRTOS/org/Source/queue.o: \
  C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
  C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/HAL_Driver/Inc/stm32f7xx_hal_hcd.h \
+ C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h \
+ C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW.h \
+ C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/SEGGER/SEGGER/SEGGER.h \
+ C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/SEGGER/Config/Global.h \
  C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/FreeRTOS/org/Source/include/projdefs.h \
  C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/FreeRTOS/org/Source/include/portable.h \
  C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/FreeRTOS/org/Source/include/deprecated_definitions.h \
@@ -237,6 +241,14 @@ C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/HAL
 C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h:
 
 C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/HAL_Driver/Inc/stm32f7xx_hal_hcd.h:
+
+C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h:
+
+C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW.h:
+
+C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/SEGGER/SEGGER/SEGGER.h:
+
+C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/SEGGER/Config/Global.h:
 
 C:/Users/VRAVI/Documents/Sigma/STMF7_FreeRTOS/Workspace/STM32_FreeRTOSBlinky/ThirdParty/FreeRTOS/org/Source/include/projdefs.h:
 

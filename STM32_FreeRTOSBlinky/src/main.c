@@ -36,10 +36,21 @@ char charmsg[250] = {0};
 
 int main(void)
 {
+	//Required for timestamps on Segger system view tools
+    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+    DWT->LAR = 0xC5ACCE55;
+    DWT->CYCCNT = 0;
+    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+
 	prvSetupHardware();
 
 	sprintf(charmsg,"Hello world \r\n");
 	printmsg(charmsg);
+
+	//Start Segger system view
+	SEGGER_SYSVIEW_Conf();
+	SEGGER_SYSVIEW_Start();
+
 	//Create task 1
 	xTaskCreate(vTask1_handler, "Task_1", configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle1);
 	//Create task 2

@@ -11,6 +11,9 @@ RM := rm -rf
 -include startup/subdir.mk
 -include src/subdir.mk
 -include Utilities/STM32F7xx_Nucleo_144/subdir.mk
+-include ThirdParty/SEGGER/SEGGER/subdir.mk
+-include ThirdParty/SEGGER/OS/subdir.mk
+-include ThirdParty/SEGGER/Config/subdir.mk
 -include ThirdParty/FreeRTOS/org/Source/portable/MemMang/subdir.mk
 -include ThirdParty/FreeRTOS/org/Source/portable/GCC/ARM_CM7/r0p1/subdir.mk
 -include ThirdParty/FreeRTOS/org/Source/subdir.mk

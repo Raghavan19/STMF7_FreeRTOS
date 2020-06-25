@@ -20,6 +20,9 @@ HAL_Driver/Src \
 ThirdParty/FreeRTOS/org/Source \
 ThirdParty/FreeRTOS/org/Source/portable/GCC/ARM_CM7/r0p1 \
 ThirdParty/FreeRTOS/org/Source/portable/MemMang \
+ThirdParty/SEGGER/Config \
+ThirdParty/SEGGER/OS \
+ThirdParty/SEGGER/SEGGER \
 Utilities/STM32F7xx_Nucleo_144 \
 src \
 startup \

@@ -98,6 +98,9 @@ to exclude the API function. */
 #define INCLUDE_vTaskDelay				1
 #define INCLUDE_eTaskGetState			1
 #define INCLUDE_xTimerPendFunctionCall	1
+//Below defines for Segger system view tools
+#define INCLUDE_xTaskGetIdleTaskHandle  1
+#define INCLUDE_pxTaskGetStackStart     1
 
 /* Cortex-M specific definitions. */
 #ifdef __NVIC_PRIO_BITS
@@ -145,6 +148,9 @@ files. */
 	//#define configASSERT( x ) if( ( x ) == 0 ) vAssertCalled( __LINE__, __FILE__ )
 
 #endif /* __IAR_SYSTEMS_ASM__ */
+
+//Below include for Segger system view tools
+#include "SEGGER_SYSVIEW_FreeRTOS.h"
 
 #endif /* FREERTOS_CONFIG_H */
 
